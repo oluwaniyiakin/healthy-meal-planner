@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Meal Planner</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="header">
-        <h1>Healthy Meal Planner</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Meal Plans</a></li>
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">Shopping List</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main id="main-content">
-        <h2>Welcome to Healthy Meal Planner</h2>
-        <p>Start planning your meals today!</p>
-    </main>
+    <!-- Navigation Bar -->
+    <nav id="navbar"></nav>
 
-    <footer id="footer">
-        <p>Healthy Meal Planner &copy; 2025</p>
-    </footer>
+    <!-- Authentication Section -->
+    <div class="auth-container">
+        <h2>Login / Register</h2>
+        <input type="email" id="email" placeholder="Enter your email">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button id="signup-btn">Sign Up</button>
+        <button id="login-btn">Login</button>
+        <button id="logout-btn" style="display: none;">Logout</button>
+    </div>
 
-    <script src="app.js"></script>
+    <!-- Meal Plan Section -->
+    <div class="meal-container">
+        <h2>Generate Meal Plan</h2>
+        <button id="generate-meal-plan">Get Meal Plan</button>
+        <div id="meal-results"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script type="module" src="src/app.js"></script>
 </body>
 </html>

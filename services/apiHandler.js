@@ -1,18 +1,19 @@
-// Example of API handler module structure
-const apiKey = 'c4203a13daf3424886c5349745ea5d8c'; //  API key
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
-const fetchMealPlans = async () => {
-    const response = await fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=${apiKey}`);
-    const data = await response.json();
-    console.log(data);
-    return data;
+// Your Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBhmElLvtDNBKBp0H1ntSt0SdwAd_i3E4I",
+  authDomain: "mealplan-3b36c.firebaseapp.com",
+  projectId: "mealplan-3b36c",
+  storageBucket: "mealplan-3b36c.appspot.com",
+  messagingSenderId: "413326490392",
+  appId: "1:413326490392:web:7e9dc39f8bc7fd7e22bc6d",
+  measurementId: "G-J9S0CV0VCQ",
 };
 
-const fetchRecipes = async (ingredient) => {
-    const response = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&apiKey=${apiKey}`);
-    const data = await response.json();
-    console.log(data);
-    return data;
-};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-export { fetchMealPlans, fetchRecipes };
+export { auth };
