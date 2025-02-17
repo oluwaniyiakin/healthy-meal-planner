@@ -1,4 +1,5 @@
 // Import Firebase Authentication methods
+import { initializeApp } from "firebase/app";
 import { auth } from "./firebase-config.js";
 import { 
     createUserWithEmailAndPassword, 
