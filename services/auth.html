@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner - Auth</title>
+    <script defer src="auth.js"></script>
+</head>
+<body>
+    <h1>Meal Planner - Authentication</h1>
+
+    <div>
+        <h2>Sign Up</h2>
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button id="signup-btn">Sign Up</button>
+    </div>
+
+    <div>
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <div>
+        <h2>Logout</h2>
+        <button id="logout-btn">Logout</button>
+    </div>
+
+    <script>
+        import { signUp, login, logout } from './auth.js';
+
+        document.getElementById("signup-btn").addEventListener("click", () => {
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
+            signUp(email, password);
+        });
+
+        document.getElementById("login-btn").addEventListener("click", () => {
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+            login(email, password);
+        });
+
+        document.getElementById("logout-btn").addEventListener("click", () => {
+            logout();
+        });
+    </script>
+</body>
+</html>
