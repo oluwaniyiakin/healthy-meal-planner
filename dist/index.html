@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Meal Planner</title>
+    <link rel="stylesheet" href="/style.251b6741.css">
+<script src="/style.251b6741.js"></script></head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar"></nav>
+
+    <!-- Authentication Section -->
+    <div class="auth-container">
+        <h2>Login / Register</h2>
+        <input type="email" id="email" placeholder="Enter your email">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button id="signup-btn">Sign Up</button>
+        <button id="login-btn">Login</button>
+        <button id="logout-btn" style="display: none;">Logout</button>
+    </div>
+<!-- Add to index.html -->
+<div>
+    <label>
+        <input type="checkbox" id="vegan-filter"> Vegan
+    </label>
+    <label>
+        <input type="checkbox" id="low-carb-filter"> Low Carb
+    </label>
+</div>
+
+    <!-- Meal Plan Section -->
+    <div class="meal-container">
+        <h2>Generate Meal Plan</h2>
+        <button id="generate-meal-plan">Get Meal Plan</button>
+        <div id="meal-results"></div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script type="module" src="/app.a6a4d504.js"></script>
+</body>
+</html>
