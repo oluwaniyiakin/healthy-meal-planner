@@ -8,8 +8,8 @@
 <script src="/style.251b6741.js"></script></head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav id="navbar"></nav>
+    <!-- Navigation Bar (Injected from header.js) -->
+    <header id="navbar"></header>
 
     <!-- Authentication Section -->
     <div class="auth-container">
@@ -20,15 +20,16 @@
         <button id="login-btn">Login</button>
         <button id="logout-btn" style="display: none;">Logout</button>
     </div>
-<!-- Add to index.html -->
-<div>
-    <label>
-        <input type="checkbox" id="vegan-filter"> Vegan
-    </label>
-    <label>
-        <input type="checkbox" id="low-carb-filter"> Low Carb
-    </label>
-</div>
+
+    <!-- Meal Preference Filters -->
+    <div class="filter-container">
+        <label>
+            <input type="checkbox" id="vegan-filter"> Vegan
+        </label>
+        <label>
+            <input type="checkbox" id="low-carb-filter"> Low Carb
+        </label>
+    </div>
 
     <!-- Meal Plan Section -->
     <div class="meal-container">
@@ -37,11 +38,18 @@
         <div id="meal-results"></div>
     </div>
 
+    <!-- Shopping List Section -->
+    <div class="shopping-list">
+        <h2>Shopping List</h2>
+        <ul id="shopping-list"></ul>
+    </div>
 
-    <!-- Footer -->
+    <!-- Footer (Injected from footer.js) -->
     <footer id="footer"></footer>
 
     <!-- Scripts -->
+    <script type="module" src="/header.66b520ad.js"></script>
+    <script type="module" src="/footer.6ef1f1d1.js"></script>
     <script type="module" src="/app.a6a4d504.js"></script>
 </body>
 </html>
