@@ -8,48 +8,76 @@
 </head>
 <body>
 
-    <!-- Navigation Bar (Injected from header.js) -->
-    <header id="navbar"></header>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h1>Healthy Meal Planner</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Meal Plans</a></li>
+                <li><a href="#">Shopping List</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Authentication Section -->
-    <div class="auth-container">
-        <h2>Login / Register</h2>
-        <input type="email" id="email" placeholder="Enter your email">
-        <input type="password" id="password" placeholder="Enter your password">
-        <button id="signup-btn">Sign Up</button>
-        <button id="login-btn">Login</button>
-        <button id="logout-btn" style="display: none;">Logout</button>
-    </div>
+    <!-- Main Content -->
+    <main>
 
-    <!-- Meal Preference Filters -->
-    <div class="filter-container">
-        <label>
-            <input type="checkbox" id="vegan-filter"> Vegan
-        </label>
-        <label>
-            <input type="checkbox" id="low-carb-filter"> Low Carb
-        </label>
-    </div>
+        <!-- Authentication Section -->
+        <section class="auth-container">
+            <h2>Login / Register</h2>
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="password" id="password" placeholder="Enter your password">
+            <button id="signup-btn">Sign Up</button>
+            <button id="login-btn">Login</button>
+            <button id="logout-btn" style="display: none;">Logout</button>
+        </section>
 
-    <!-- Meal Plan Section -->
-    <div class="meal-container">
-        <h2>Generate Meal Plan</h2>
-        <button id="generate-meal-plan">Get Meal Plan</button>
-        <div id="meal-results"></div>
-    </div>
+        <!-- Meal Preferences Section -->
+        <section class="filter-container">
+            <h2>Filter Meal Preferences</h2>
+            <label>
+                <input type="checkbox" id="vegan-filter"> Vegan
+            </label>
+            <label>
+                <input type="checkbox" id="low-carb-filter"> Low Carb
+            </label>
+        </section>
 
-    <!-- Shopping List Section -->
-    <div class="shopping-list">
-        <h2>Shopping List</h2>
-        <ul id="shopping-list"></ul>
-    </div>
+        <!-- Meal Plan Section -->
+        <section class="meal-container">
+            <h2>Generate Your Meal Plan</h2>
+            <button id="generate-meal-plan">Get Meal Plan</button>
+            <div id="meal-results"></div>
+        </section>
 
-    <!-- Footer (Injected from footer.js) -->
-    <footer id="footer"></footer>
+        <!-- Shopping List Section -->
+        <section class="shopping-list">
+            <h2>Your Shopping List</h2>
+            <ul id="shopping-list"></ul>
+        </section>
+
+        <!-- Health Tips Section -->
+        <section class="health-tips">
+            <h2>Health & Nutrition Tips</h2>
+            <ul>
+                <li>🥦 Eat a balanced diet with fresh fruits and vegetables.</li>
+                <li>💧 Stay hydrated by drinking at least 8 glasses of water daily.</li>
+                <li>🏃‍♂️ Exercise regularly for at least 30 minutes a day.</li>
+                <li>😴 Get at least 7-8 hours of sleep for better metabolism.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Healthy Meal Planner | All Rights Reserved.</p>
+    </footer>
 
     <!-- Scripts -->
-    <script type="module" src="src/components/header.js"></script>
-    <script type="module" src="src/components/footer.js"></script>
     <script type="module" src="src/app.js"></script>
+
 </body>
 </html>
