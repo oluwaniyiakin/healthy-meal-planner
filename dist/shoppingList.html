@@ -1,0 +1,18 @@
+<!-- shoppingList.html -->
+<div id="shopping-list-container">
+    <h3>Your Shopping List</h3>
+    <ul id="shopping-list"></ul>
+    <button id="clear-list-btn">Clear List</button>
+</div>
+
+<script type="module">
+    import { loadShoppingList, clearShoppingList } from "./shoppingList.js";
+
+    // Load saved shopping list on page load
+    loadShoppingList();
+
+    // Clear shopping list button
+    document.getElementById("clear-list-btn").addEventListener("click", () => {
+        clearShoppingList();
+    });
+</script>
